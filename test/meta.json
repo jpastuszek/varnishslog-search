@@ -1,0 +1,1551 @@
+{
+  "segments": [],
+  "schema": [
+    {
+      "name": "log.vars.refresh",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.origin_timestamp",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.headers.Request-Uri.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.messages.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "sent_total_bytes",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.recv_total_bytes",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "recv_header_bytes",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Request-Id.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "response.headers.Server.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Varnish-Client-Country.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.headers.Connection.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.headers.Date.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.protocol",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "response.reason",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "request.headers.Host.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.request_via",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.log.vars.compressable",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "recv_total_bytes",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.backend_connection.fd",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.status",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.ban_tags",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Varnish-Client-Ip.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "request.url",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Varnish.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.headers.Content-Length.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.headers.Request-Connection.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.fetch_mode",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.decision",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.log.vars.decision",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.fetch_streamed",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.Date.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "sent_header_bytes",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.client_proxy_stage",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.backend_connection.local_address.ip",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "response.headers.Cache-Control.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.headers.Sequence.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "response.headers.Content-Length.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.backend_connection.remote_address.ip",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.log.vars.esi_parsed",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "sent_body_bytes",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "record_type",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.request_id",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.grace_duration",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "ttfb_duration",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.client_device",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "end_timestamp",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "response.headers.Request-Connection.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "request.headers.X-Test-Id.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.ttl_duration",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.headers.Accept-Ranges.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "response.headers.Accept-Ranges.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.headers.X-Aspnet-Version.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.esi_level",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.client_ip",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.protocol",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.headers.Sequence.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.start_timestamp",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "response.headers.X-Request-Id.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.esi_processing",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Test-Id.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.acl_not_matched.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "handling",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.end_timestamp",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.fetch_duration",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.headers.Server.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.user_agent_class",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "request.method",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.server_name",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.headers.Content-Type.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "request.protocol",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "recv_body_bytes",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.recv_header_bytes",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.url",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.forwarded_proto",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.log.vars.cache_class",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "fetch_duration",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.headers.Request-Connection.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.headers.Request-Uri.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.headers.Content-Type.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "request.headers.X-Forwarded-For.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.privileged_client",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "remote_address.ip",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "response.protocol",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.storage_type",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Varnish-Peer-Ip.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.wait_duration",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Varnish-Privileged-Client.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.backend_connection.remote_address.port",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "response.headers.Connection.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.compression",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "response.headers.Content-Type.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.acl_not_matched.1",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.response_via",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "response.headers.Sequence.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "remote_address.port",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Forwarded-For.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.headers.Date.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.reason",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.headers.X-Url.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "compression",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.storage_name",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "request.headers.Date.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.Accept-Encoding.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.headers.X-Aspnet-Version.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.recv_body_bytes",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.client_country",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.backend_connection.name",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.Via.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Forwarded-Proto.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.sent_body_bytes",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "start_timestamp",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.data_source",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.method",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.ttfb_duration",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "response.headers.Date.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "esi_count",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.sent_header_bytes",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "vxid",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Varnish-Client-Device.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.page_params",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.handling",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "response.headers.Request-Uri.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.status",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.headers.Content-Length.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "serve_duration",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.headers.Server.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Varnish-User-Agent-Class.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Varnish-Original-Host.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.vxid",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "response.status",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.since_timestamp",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.protocol",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.keep_duration",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.X-Varnish-Original-Url.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.reason",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "process_duration",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.retry",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "restart_count",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.forwarded_for",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.backend_connection.local_address.port",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.request.headers.Host.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.object_hits",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.cache_object.response.headers.X-Varnish-Ban-Tags.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "log.vars.object_age",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.sent_total_bytes",
+      "type": "u64",
+      "options": {
+        "indexed": true,
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.send_duration",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    },
+    {
+      "name": "backend_access.response.headers.Accept-Ranges.0",
+      "type": "text",
+      "options": {
+        "indexing": {
+          "record": "position",
+          "tokenizer": "en_stem"
+        },
+        "stored": true
+      }
+    }
+  ],
+  "opstamp": 0
+}

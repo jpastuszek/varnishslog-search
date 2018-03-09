@@ -1,0 +1,8 @@
+[package]
+name = "varnishslog-serch"
+version = "0.1.0"
+authors = ["Jakub Pastuszek <jpastuszek@gmail.com>"]
+
+[dependencies]
+dot_json = "0.2.0"
+serde_json = { version = "1.0.10", features = ["preserve_order"] }
