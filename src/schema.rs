@@ -69,7 +69,6 @@ if insert {
                             "record": "position",
                             "tokenizer": "en_stem"
                         },
-                        "indexed": true,
                         "stored": true
                     }
                 })
