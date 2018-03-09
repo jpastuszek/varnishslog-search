@@ -59,10 +59,23 @@ fn main() {
                             "tokenizer": "en_stem"
                         },
                         "indexed": true,
+                        "stored": false
+                    }
+                })
+            ).chain(Some(
+                json!({
+                    "name": "_doc",
+                    "type": "text",
+                    "options": {
+                        "indexing": {
+                            "record": "position",
+                            "tokenizer": "en_stem"
+                        },
+                        "indexed": false,
                         "stored": true
                     }
                 })
-            ).collect::<Vec<_>>()
+            )).collect::<Vec<_>>()
         ,
         "opstamp": 0 
     });
