@@ -3,7 +3,7 @@ extern crate serde_json;
 extern crate dot_json;
 
 use serde_json::Value;
-use std::io;
+use std::io::{self, BufReader, BufRead};
 use dot_json::value_to_dot;
 use std::collections::HashMap;
 
@@ -14,33 +14,31 @@ enum SchemaType {
 }
 
 fn main() {
-    let obj: Value = serde_json::from_reader(io::stdin()).unwrap();
-    let dot_obj = value_to_dot(&obj);
-    //println!("{}", serde_json::to_string_pretty(&dot_obj).unwrap());
-
     let mut schema = HashMap::new();
 
-    match dot_obj {
-        Value::Object(map) => {
-            for (key, value) in map.into_iter() {
-                //println!("{} {}", key, value);
+    for line in BufReader::new(io::stdin()).lines() {
+        let obj: Value = serde_json::from_str(&line.expect("failed to read input")).unwrap();
+        let dot_obj = value_to_dot(&obj);
 
-                let schema_type = match value {
-                    Value::Number(ref num) if num.is_u64() => SchemaType::U64,
-                    value => SchemaType::Text(value)
-                };
-                //schema.insert(key, schema_type);
-                let insert = match (schema.get(&key), &schema_type) {
-                    (Some(&SchemaType::Text(_)), &SchemaType::U64) => false, // keep Text over I64
-                    _ => true
-                };
+        match dot_obj {
+            Value::Object(map) => {
+                for (key, value) in map.into_iter() {
+                    let schema_type = match value {
+                        Value::Number(ref num) if num.is_u64() => SchemaType::U64,
+                        value => SchemaType::Text(value)
+                    };
 
-                if insert {
-                    schema.insert(key, schema_type);
+                    let insert = match (schema.get(&key), &schema_type) {
+                        (Some(&SchemaType::Text(_)), &SchemaType::U64) => false, // keep Text over I64
+                        _ => true
+                    };
+if insert {
+                        schema.insert(key, schema_type);
+                    }
                 }
             }
+            _ => panic!("not object!")
         }
-        _ => panic!("not object!")
     }
 
     let meta = json!({
@@ -59,7 +57,7 @@ fn main() {
                             "tokenizer": "en_stem"
                         },
                         "indexed": true,
-                        "stored": false
+                        "stored": true
                     }
                 })
             ).chain(Some(
@@ -71,7 +69,7 @@ fn main() {
                             "record": "position",
                             "tokenizer": "en_stem"
                         },
-                        "indexed": false,
+                        "indexed": true,
                         "stored": true
                     }
                 })
